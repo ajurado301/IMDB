@@ -69,17 +69,17 @@ export class Professional {
     public getRace(): string { return this.race };
     public setRace(race: string): void { this.race = race };
     // isRetired
-    public getisRetired(): boolean { return this.isRetired };
-    public setisRetired(isRetired: boolean): void { this.isRetired = isRetired };
+    public getIsRetired(): boolean { return this.isRetired };
+    public setIsRetired(isRetired: boolean): void { this.isRetired = isRetired };
     // nationality
-    public getNationalityName(): string { return this.nationality };
-    public setNationalityName(nationality: string): void { this.nationality = nationality };
+    public getNationality(): string { return this.nationality };
+    public setNationality(nationality: string): void { this.nationality = nationality };
     // oscarsNumber
     public getOscarsNumber(): number { return this.oscarsNumber };
     public setOscarsNumber(oscarsNumber: number): void { this.oscarsNumber = oscarsNumber };
     // profession
     public getProfession(): string { return this.profession };
-    public setProfession(profession: string): void { this.name = profession };
+    public setProfession(profession: string): void { this.profession = profession };
 
     // Métodos públicos
     public printProfessional(): void {
