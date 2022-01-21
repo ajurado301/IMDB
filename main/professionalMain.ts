@@ -25,6 +25,7 @@ console.log("Nacionalidad :", profesional1.getNationality());
 console.log("Nº de Oscars :", profesional1.getOscarsNumber());
 console.log("Profesión    :", profesional1.getProfession());
 // setters
+console.log("Valores de profesional1 cambiados con setters y mostrados con getters:");
 profesional1.setName("Charlize Theron");
 profesional1.setAge(46);
 profesional1.setGenre("Femenino")
@@ -38,7 +39,6 @@ profesional1.setNationality("Sudafricana");
 profesional1.setOscarsNumber(1);
 profesional1.setProfession("Actriz");
 // Volver a mostrar
-console.log("Valores cambiados de profesional1 mostrados con getters:");
 console.log("Nombre       :", profesional1.getName());
 console.log("Edad         :", profesional1.getAge());
 console.log("Genero       :", profesional1.getGenre());
