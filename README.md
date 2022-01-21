@@ -8,3 +8,6 @@
 
 ### Rama clase_movie
 - Implementación de la clase Movie
+
+### Rama clase_imdb
+- Implementación de la clase Imdb
