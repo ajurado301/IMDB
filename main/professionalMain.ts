@@ -1,7 +1,7 @@
 // Para test de la clase Professional
 import { Professional } from '../clases/professional';
 
-// Instanciar Professiona
+// Instanciar Professional
 let profesional1: Professional = new Professional("Nombre provisional", 50, "Genero provisonal", 60, 150, "Verde", "Marron", "Malaya", true, "Española", 0, "Actor");
 let profesional2: Professional = new Professional("Keanu Reeves", 57, "Masculino", 82, 186, "Negro", "Negro", "Caucásica", false, "Libanesa", 0, "Actor");
 let profesional3: Professional = new Professional("Uma Thurman", 51, "Femenino", 71, 180, "Rubio", "Azul", "Caucásica", false, "Estadounidense", 0, "Actriz");
