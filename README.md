@@ -11,3 +11,6 @@
 
 ### Rama clase_imdb
 - Implementación de la clase Imdb
+
+### Rama seccion_avanzado
+- Sección avanzada - Parte 1
