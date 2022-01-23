@@ -47,7 +47,7 @@
                     "profession": "Actriz"
                 }
             ],
-            "nacionality": "Estadounidense",
+            "nationality": "Estadounidense",
             "language": "Inglés",
             "platform": "Cine",
             "isMCU": false,
@@ -144,7 +144,7 @@
                     "profession": "Actriz"
                 }
             ],
-            "nacionality": "Canadiense",
+            "nationality": "Canadiense",
             "language": "Español",
             "platform": "Streamer",
             "isMCU": false,
@@ -241,7 +241,7 @@
                     "profession": "Actriz"
                 }
             ],
-            "nacionality": "Inglesa",
+            "nationality": "Inglesa",
             "language": "Alemán",
             "platform": "TV",
             "isMCU": true,

@@ -4,18 +4,18 @@ import { Professional } from './professional';
 export class Movie {
 
     // Atributos públicos
-    public title:string;
-    public releaseYear:string;
-    public actors:Professional[];
-    public nacionality:string;
-    public director!:Professional; // Preguntar conmo inicializar nulo un atributo con tipo Professional
-    public writer!:Professional;
-    public language:string;
-    public platform:string;
-    public isMCU:boolean;
-    public mainCharacterName:string;
-    public producer!:Professional;
-    public distributor:string;
+    public title: string;
+    public releaseYear: string;
+    public actors: Professional[];
+    public nationality: string;
+    public director!: Professional; // Preguntar conmo inicializar nulo un atributo con tipo Professional
+    public writer!: Professional;
+    public language: string;
+    public platform: string;
+    public isMCU: boolean;
+    public mainCharacterName: string;
+    public producer!: Professional;
+    public distributor: string;
     public genre:string;
 
     // Constructor
@@ -23,7 +23,7 @@ export class Movie {
         this.title = title;
         this.releaseYear = releaseYear;
         this.actors = [];
-        this.nacionality = nationality;
+        this.nationality = nationality;
         this.language = "";
         this.platform = "";
         this.isMCU = false;
