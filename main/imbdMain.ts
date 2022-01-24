@@ -65,9 +65,9 @@ pelicula3.genre = "Superhéroes";
 let arrayPeliculas: Movie[] = [pelicula1, pelicula2, pelicula3];
 
 // Instanciar Isdb
-let miIsdb: Imdb = new Imdb(arrayPeliculas);
+let miImdb: Imdb = new Imdb(arrayPeliculas);
 
 // Comprobar peliculas
-miIsdb.peliculas.forEach((pelicula) => {
+miImdb.peliculas.forEach((pelicula) => {
     pelicula.printMovie();
 })
