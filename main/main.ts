@@ -68,15 +68,12 @@ let arrayPeliculas: Movie[] = [pelicula1, pelicula2, pelicula3];
 // Instanciar Isdb con tres películas como punto de partida
 let imdb: Imdb = new Imdb(arrayPeliculas);
 
-// Convertir objeto imdb en string
-let cadenaJSON: string = JSON.stringify(imdb);
-let nombreArchivo = "../bbdd/imdbBBDD.json"
+// Convertir objeto imdb en string y guardar fichero
+escribirEnFicheroJSON("imdbBBDD.json")
 
-// Guardar fichero
-fs.writeFileSync(nombreArchivo, cadenaJSON);
 
 // Leemos el fichero
-cadenaJSON = fs.readFileSync(nombreArchivo).toString();
+let cadenaJSON = fs.readFileSync(nombreArchivo).toString();
 // TODO: ¿Como asignar el resultado a la instancia sin perder métodos de sus atributos? lo comentado abajo no funciona
 // imdb = JSON.parse(cadenaJSON);
 // console.log(imdb.peliculas[0].printMovie());
@@ -95,3 +92,7 @@ nuevoImdb.peliculas = getArrayPeliculas(json);
 nuevoImdb.peliculas.forEach((pelicula) => {
     pelicula.printMovie();
 });
+function escribirEnFicheroJSON(arg0: string) {
+    throw new Error('Function not implemented.');
+}
+
