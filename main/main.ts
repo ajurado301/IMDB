@@ -1,7 +1,10 @@
 // Para test de la parte avanzada
+// Clases
 import { Imdb } from '../clases/imdb';
 import { Movie } from '../clases/movie';
 import { Professional } from '../clases/professional';
+// Funciones
+import { getArrayPeliculas } from './libreria';
 
 // Importamos fs (instalado desde la terminal con 'npm install @types/node --save-dev')
 import * as fs from "fs";
@@ -21,10 +24,8 @@ let productor: Professional = new Professional("Joel Silver", 69, "Masculino", 8
 
 // Instanciar Movie
 let pelicula1: Movie = new Movie("Matrix", "1999", "Estadounidense");
-// Crear array de actores
-let arrayActores: Professional[] = [actor2, actor4, actor5];
 // Añadir resto datos (directamente ya que son públicos)
-pelicula1.actors = arrayActores;
+pelicula1.actors = [actor2, actor4, actor5];
 pelicula1.director = director1;
 pelicula1.writer = guionista1;
 pelicula1.language = "Inglés";
@@ -36,10 +37,8 @@ pelicula1.distributor = "Warner Bros"
 pelicula1.genre = "Ciencia ficción";
 // Instanciar Movie
 let pelicula2: Movie = new Movie("Titanic", "1995", "Canadiense");
-// Asignar array de actores
-arrayActores = [actor1, actor2, actor3];
 // Añadir resto datos (directamente ya que son públicos)
-pelicula2.actors = arrayActores;
+pelicula2.actors = [actor1, actor2, actor3];
 pelicula2.director = director2;
 pelicula2.writer = guionista2;
 pelicula2.language = "Español";
@@ -51,10 +50,8 @@ pelicula2.distributor = "20th Century Studios"
 pelicula2.genre = "Histórica";
 // Instanciar Movie
 let pelicula3: Movie = new Movie("Spider-Man", "2005", "Inglesa");
-// Asignar array de actores
-arrayActores = [actor1, actor3, actor5];
 // Añadir resto datos (directamente ya que son públicos)
-pelicula3.actors = arrayActores;
+pelicula3.actors = [actor1, actor3, actor5];
 pelicula3.director = director1;
 pelicula3.writer = guionista2;
 pelicula3.language = "Alemán";
@@ -78,3 +75,23 @@ let nombreArchivo = "../bbdd/imdbBBDD.json"
 // Guardar fichero
 fs.writeFileSync(nombreArchivo, cadenaJSON);
 
+// Leemos el fichero
+cadenaJSON = fs.readFileSync(nombreArchivo).toString();
+// TODO: ¿Como asignar el resultado a la instancia sin perder métodos de sus atributos? lo comentado abajo no funciona
+// imdb = JSON.parse(cadenaJSON);
+// console.log(imdb.peliculas[0].printMovie());
+
+
+// PRUEBAS: obtener nuevo objeto Imdb a partir del JSON asegurando los métodos
+let json: Imdb = JSON.parse(cadenaJSON);  // creamos json a partir de los datos leídos y de tipo Imdb para obtener su interface
+
+// Creamos una nueva instancia de Imdb sin películas
+let nuevoImdb = new Imdb([]);
+
+// Obtenemos las películas con getArrayPeliculas a partir de json (función importada de libreria.ts)
+nuevoImdb.peliculas = getArrayPeliculas(json);
+
+// Mostrar peliculas de la nueva instancia nuevoImdb (creando así la nueva instancia los métodos de las clases funcionan)
+nuevoImdb.peliculas.forEach((pelicula) => {
+    pelicula.printMovie();
+});
