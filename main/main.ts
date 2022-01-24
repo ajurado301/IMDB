@@ -195,7 +195,7 @@ while (invalido) {
 let nuevaPelicula: Movie = new Movie(datosPelicula.title, parseInt(datosPelicula.releaseYear), datosPelicula.nationality);
 nuevaPelicula.language = datosPelicula.language;
 nuevaPelicula.platform = datosPelicula.platform;
-nuevaPelicula.isMCU = (datosPelicula.isMCU == "s") ? true : false;
+nuevaPelicula.isMCU = (datosPelicula.isMCU.toLowerCase() == "s") ? true : false;
 nuevaPelicula.mainCharacterName = datosPelicula. mainCharacterName;
 nuevaPelicula.distributor = datosPelicula. distributor;
 nuevaPelicula.genre = datosPelicula.genre;
