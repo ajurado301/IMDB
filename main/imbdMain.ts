@@ -16,7 +16,7 @@ let guionista2: Professional = new Professional("Quentin Tarantino", 58, "Mascul
 let productor: Professional = new Professional("Joel Silver", 69, "Masculino", 84, 175, "Negro", "Negro", "Caucásica", false, "Estadounidense", 0, "Productor");
 
 // Instanciar Movie
-let pelicula1: Movie = new Movie("Matrix", "1999", "Estadounidense");
+let pelicula1: Movie = new Movie("Matrix", 1999, "Estadounidense");
 // Crear array de actores
 let arrayActores: Professional[] = [actor2, actor4, actor5];
 // Añadir resto datos (directamente ya que son públicos)
@@ -31,7 +31,7 @@ pelicula1.producer = productor;
 pelicula1.distributor = "Warner Bros"
 pelicula1.genre = "Ciencia ficción";
 // Instanciar Movie
-let pelicula2: Movie = new Movie("Titanic", "1995", "Canadiense");
+let pelicula2: Movie = new Movie("Titanic", 1995, "Canadiense");
 // Asignar array de actores
 arrayActores = [actor1, actor2, actor3];
 // Añadir resto datos (directamente ya que son públicos)
@@ -46,7 +46,7 @@ pelicula2.producer = productor;
 pelicula2.distributor = "20th Century Studios"
 pelicula2.genre = "Histórica";
 // Instanciar Movie
-let pelicula3: Movie = new Movie("Spider-Man", "2005", "Inglesa");
+let pelicula3: Movie = new Movie("Spider-Man", 2005, "Inglesa");
 // Asignar array de actores
 arrayActores = [actor1, actor3, actor5];
 // Añadir resto datos (directamente ya que son públicos)

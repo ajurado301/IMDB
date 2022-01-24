@@ -5,7 +5,7 @@ export class Movie {
 
     // Atributos públicos
     public title: string;
-    public releaseYear: string;
+    public releaseYear: number;
     public actors: Professional[];
     public nationality: string;
     public director!: Professional; // Preguntar conmo inicializar nulo un atributo con tipo Professional
@@ -19,7 +19,7 @@ export class Movie {
     public genre:string;
 
     // Constructor
-    constructor(title: string, releaseYear: string, nationality: string) {
+    constructor(title: string, releaseYear: number, nationality: string) {
         this.title = title;
         this.releaseYear = releaseYear;
         this.actors = [];

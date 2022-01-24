@@ -18,7 +18,7 @@ let productor: Professional = new Professional("Joel Silver", 69, "Masculino", 8
 let arrayActores: Professional[] = [actor2, actor4, actor5];
 
 // Instanciar Movie
-let pelicula1: Movie = new Movie("Matrix", "1999", "Estadounidense");
+let pelicula1: Movie = new Movie("Matrix", 1999, "Estadounidense");
 
 // Añadir resto datos (directamente ya que son públicos)
 pelicula1.actors = arrayActores;
