@@ -3,13 +3,7 @@
 import { Imdb } from '../clases/imdb';
 import { Movie } from '../clases/movie';
 import { Professional } from '../clases/professional';
-// Funciones
-import { getArrayPeliculas } from './libreria';
 
-// Importamos fs (instalado desde la terminal con 'npm install @types/node --save-dev')
-import * as fs from "fs";
-
-// Creamos un IMDB para pasarlo a fichero (con los mismos datos que usamos en "imdbMain.ts")
 // Instanciar Professional
 let actor1: Professional = new Professional("Charlize Theron", 46, "Femenino", 58, 177, "Rubio", "Azul", "Caucásica", false, "Sudafricana", 1, "Actriz");
 let actor2: Professional = new Professional("Keanu Reeves", 57, "Masculino", 82, 186, "Negro", "Negro", "Caucásica", false, "Libanesa", 0, "Actor");
@@ -65,34 +59,17 @@ pelicula3.genre = "Superhéroes";
 // Crear array de peliculas
 let arrayPeliculas: Movie[] = [pelicula1, pelicula2, pelicula3];
 
-// Instanciar Isdb con tres películas como punto de partida
+// Instanciar Imdb con tres películas como punto de partida
 let imdb: Imdb = new Imdb(arrayPeliculas);
 
-// Convertir objeto imdb en string y guardar fichero
-escribirEnFicheroJSON("imdbBBDD.json")
+// invocar método para guardar a fichero json
+imdb.escribirEnFicheroJSON("imdbBBDD.json");
 
-
-// Leemos el fichero
-let cadenaJSON = fs.readFileSync(nombreArchivo).toString();
-// TODO: ¿Como asignar el resultado a la instancia sin perder métodos de sus atributos? lo comentado abajo no funciona
-// imdb = JSON.parse(cadenaJSON);
-// console.log(imdb.peliculas[0].printMovie());
-
-
-// PRUEBAS: obtener nuevo objeto Imdb a partir del JSON asegurando los métodos
-let json: Imdb = JSON.parse(cadenaJSON);  // creamos json a partir de los datos leídos y de tipo Imdb para obtener su interface
-
-// Creamos una nueva instancia de Imdb sin películas
-let nuevoImdb = new Imdb([]);
-
-// Obtenemos las películas con getArrayPeliculas a partir de json (función importada de libreria.ts)
-nuevoImdb.peliculas = getArrayPeliculas(json);
+// invocar método para crear intancia Imdb a partir de un fichero
+let nuevoImdb: Imdb = Imdb.obtenerInstanciaIMDB("imdbBBDD.json");
 
 // Mostrar peliculas de la nueva instancia nuevoImdb (creando así la nueva instancia los métodos de las clases funcionan)
 nuevoImdb.peliculas.forEach((pelicula) => {
     pelicula.printMovie();
 });
-function escribirEnFicheroJSON(arg0: string) {
-    throw new Error('Function not implemented.');
-}
 
