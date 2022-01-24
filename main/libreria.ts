@@ -1,4 +1,4 @@
-import { Professional } from '../../../IMDB.borrar/clases/professional';
+import { Professional } from '../clases/professional';
 import { Imdb } from '../clases/imdb';
 import { Movie } from '../clases/movie';
 

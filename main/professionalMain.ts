@@ -9,6 +9,7 @@ let profesional4: Professional = new Professional("James Cameron", 67, "Masculin
 let profesional5: Professional = new Professional("Quentin Tarantino", 58, "Masculino", 92, 185, "Marrón oscuro", "Café", "Caucásica", false, "Estadounidense", 2, "Guionista");
 let profesional6: Professional = new Professional("Joel Silver", 69, "Masculino", 84, 175, "Negro", "Negro", "Caucásica", false, "Estadounidense", 0, "Productor");
 
+// let profesional1: Professional = new Professional("Charlize Theron", 46, "Femenino", 58, 177, "Rubio", "Azul", "Caucásico", false, "Sudafricana", 1, "Actriz");
 // Probar método printProfessional
 let arrayProfesionales: Professional[] = [profesional1, profesional2, profesional3, profesional4, profesional5, profesional6];
 console.log("\nMostrando datos de arrayProfesionales con printProfessional():")
