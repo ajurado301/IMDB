@@ -26,7 +26,7 @@ export class Imdb {
 
     // método estático que devuelve una instancia Imdb leido del archivo json especificado
     public static obtenerInstanciaIMDB(nombreFichero: string): Imdb {
-        let cadenaJSON: string = fs.readFileSync(path + nombreFichero).toString();
+        let cadenaJSON: string = fs.readFileSync(path + nombreFichero, "utf-8");
         let json: Imdb = JSON.parse(cadenaJSON);
         return new Imdb(getArrayPeliculas(json));
     }
